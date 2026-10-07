@@ -3,7 +3,8 @@
     --bg-color: #1a2f21;      
     --text-color: #F5F0E8;     
     --accent-color: #F5F0E8;   
-    --header-bg: #050d08;      
+    --header-bg: #050d08;   
+    --green:rgb(192, 238, 142); 
     --header-text: #d4c0b8;
     --about: #F5F0E8; 
     --fat-font:'Archivo Black', sans-serif;
@@ -53,6 +54,7 @@ nav {
     line-height: 1.6;
     margin-top: 15px;
     opacity: 0.9;
+    cursor:default;
 }
 
 
@@ -65,45 +67,58 @@ nav {
 
 .nav-links a {
     font-weight: var(--normal-font-weight);
-    
+    display: inline-block;
     text-decoration: none;
     color: var(--header-text);
-    font-size: 10px;
+    font-size: 11px;
     
     transition: text-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease;
     
 }
 
-.nav-links a:hover {
-    opacity: 0.7;
-    color: var(--accent-color);
-    text-shadow: 0 0 1.5px var(--accent-color);
-    transform: scale(1.02);
+.nav-links a:hover,
+.nav-links a.active  {
+    color: var(--green);
+    text-shadow: 0 0 1.5px var(--green);
+    transform: scale(1.22);
+
 }
 
 
-.commission {
-    cursor:pointer;
-    background-color: var(--accent-color);
-    color: #FFFFFF !important;
-    padding: 9px 18px;
+.hero-buttons{
+    display:flex;
+    padding: 20px 0px;
+    gap:20px;
+    font-family: var(--normal-font);
+}
+
+.hero-buttons a {
+    color: #85ac7b;
+    border-radius: 15px;
+    padding: 7px 15px;
+    font-size: 16px;
+    font-weight: 00;
     text-decoration: none;
-    border-radius: 20px;
-    margin-left:auto;
-    transition: box-shadow 0.2s ease, background-color 0.3s ease,transform 0.2s ease;
+    transition: text-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.commission:hover{
+.hero-buttons .btn-primary {
+    background-color: var(--green);
+    color: var(--header-bg);
+   
+}
+
+.hero-buttons .btn-secondary {
     
-    background-color:var(--accent-color);
-    text-shadow: 0 0 5px #ffebf3;
-     box-shadow: 
-        0 0 0px #ffebf3,
-        0 0 5px #ffebf3,
-        0 0 12px #ffebf3;
-        transform: scale(1.02);
+     background-color: rgba(245, 240, 232, 0.12);
+     color: var(--text-color);
 }
 
+.hero-buttons a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 3px rgba(224, 248, 199, 0.8),
+                0 0 13px rgba(133, 172, 123, 0.6);
+}
 
 #main {
     min-height: 70vh;
@@ -113,7 +128,7 @@ nav {
     align-items: center;
     text-align: center;
     gap: 10px;
-     padding: 80px 70px 120px;
+     padding: 80px 70px 1200px;
 
     background: linear-gradient(to bottom, var(--header-bg) 15%, var(--bg-color) 100%);
 }
@@ -193,7 +208,7 @@ footer {
 .socials a {
     color: var(--accent-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     transition: text-shadow 0.2s ease, color 0.2s ease;
 }
 
