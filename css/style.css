@@ -110,14 +110,17 @@ nav {
 
 .hero-buttons .btn-secondary {
     
+    border: solid green 1px;
      background-color: rgba(245, 240, 232, 0.12);
      color: var(--text-color);
+     box-shadow: 0 0 3px rgba(224, 248, 199, 0.8),
+                0 0 13px rgba(133, 172, 123, 0.6);
 }
 
 .hero-buttons a:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 3px rgba(224, 248, 199, 0.8),
-                0 0 13px rgba(133, 172, 123, 0.6);
+    transform: scale(1.09);
+    box-shadow: 0 0 5px rgba(248, 255, 240, 0.8),
+                0 0 15px rgba(167, 220, 153, 0.6);
 }
 
 #main {
